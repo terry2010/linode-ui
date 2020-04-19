@@ -6,18 +6,20 @@ linode-ui golang
 
 # api
 
-https://cloud.linode.com/profile/tokens
+https://developers.linode.com/api/v4
 
 # api-doc
 
 https://www.linode.com/docs/platform/api/
 
+
 # How to
 
 ```
-1. edit config.json
+1. get your token from:    https://cloud.linode.com/profile/tokens
+2. edit config.json
 
-2. go build main.go && ./main
+3. go build main.go && ./main
 
 
 ```
