@@ -1,0 +1,6 @@
+{
+  "token": "get from:  https://cloud.linode.com/profile/tokens",
+
+  "timeout": 10,
+  "retryTime": 3
+}
