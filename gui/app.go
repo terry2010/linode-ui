@@ -10,6 +10,7 @@ import (
 	"log"
 	"net/url"
 	"os"
+	"runtime"
 	"strconv"
 )
 
@@ -17,7 +18,12 @@ var err error
 var textLog = "loading....."
 
 func Run() {
-	os.Setenv("FYNE_FONT", "C:\\windows\\Fonts\\simhei.ttf")
+
+	if "darwin" == runtime.GOOS {
+		os.Setenv("FYNE_FONT", "/System/Library/Fonts/STHeiti Medium.ttc")
+	} else {
+		os.Setenv("FYNE_FONT", "C:\\windows\\Fonts\\simhei.ttf")
+	}
 
 	myApp := app.New()
 	myWindow := myApp.NewWindow("Linode-UI")
@@ -109,8 +115,6 @@ func createServerInfoForm(tabID int, window fyne.Window, _info LinodeApi.LinodeI
 		setTabContent(tabID, window)
 		log.Println("delete..............................", err)
 	}))
-
-
 
 	form.Append("Created", widget.NewLabel(_info.Label))
 	form.Append("status", widget.NewHBox(widget.NewLabel(_info.Status), widget.NewButtonWithIcon("Refresh", theme.ViewRefreshIcon(), func() {
