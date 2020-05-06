@@ -2,30 +2,27 @@ package main
 
 import (
 	"./common"
-	"./linodeApi"
 	"./gui"
+	"./linodeApi"
 )
 
 var err error
-
 
 func main() {
 	err = Common.InitConfig()
 
 	if nil != err {
-		Gui.ErrorAlert(err.Error())
+		Gui.InputToken(err.Error())
 		return
 	}
-
 
 	err = LinodeApi.InitApi()
+
 	if nil != err {
-		Gui.ErrorAlert(err.Error())
+		Gui.InputToken(err.Error())
 		return
 	}
 
-
 	Gui.Run()
-
 
 }

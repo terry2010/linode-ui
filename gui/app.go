@@ -39,7 +39,7 @@ func setTabContent(id int, window fyne.Window) {
 	//label_1 := widget.NewLabel("Linode VPS Controller\n https://https://github.com/terry2010/linode-ui")
 	u, _ := url.Parse("https://https://github.com/terry2010/linode-ui")
 
-	cForm := widget.NewForm(widget.NewFormItem("Create Demo Linode", widget.NewLabel("Create JP/CentOS7/512M/25G Linode Now")))
+	cForm := widget.NewForm(widget.NewFormItem("Create Demo Linode", widget.NewLabel("Create JP/CentOS8/512M/25G Linode Now")))
 	_label := widget.NewEntry()
 	cForm.Append("label", _label)
 	_password := widget.NewPasswordEntry()

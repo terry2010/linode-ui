@@ -52,7 +52,7 @@ func LinodeReBoot(id string) (err error) {
 func LinodeCreateDemo(label string, password string) (err error) {
 	apiURL := ApiURLs.LinodeList
 	var data LinodeCreateJson
-	data.Image = "linode/centos7"
+	data.Image = "linode/centos8"
 	data.SwapSize = 512
 	data.RootPass = password
 	data.Booted = true
